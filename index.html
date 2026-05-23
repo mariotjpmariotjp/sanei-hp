@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社三栄｜ホームページ デザイン2案</title>
+<meta name="description" content="株式会社三栄のホームページ デザイン2案。落ち着いた緑版とボールド版から、ご覧になりたいデザインをお選びください。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=M+PLUS+Rounded+1c:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--green:#1d7a4f;--green-700:#1d7a4f;--green-900:#123f2c;--ink:#22302a;--accent:#f09636;--mist:#f2f9f4;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"M PLUS Rounded 1c",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);
+    background:radial-gradient(1100px 600px at 80% -10%,#e3f2e8,transparent 60%),linear-gradient(180deg,#fff,#eef5ef);
+    min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:42px 18px 56px;line-height:1.8;
+  }
+  .brand{display:flex;align-items:center;gap:10px;margin-bottom:30px;}
+  .brand .mark{width:46px;height:46px;}
+  .brand .nm{font-family:"Zen Maru Gothic";font-weight:900;font-size:1.5rem;color:var(--green-900);white-space:nowrap;}
+  .brand .sub{font-size:.62rem;color:#6b756e;letter-spacing:.12em;}
+  .lead{text-align:center;max-width:640px;margin-bottom:36px;}
+  .lead .eyebrow{display:inline-block;color:var(--green-700);font-family:"Zen Maru Gothic";font-weight:700;font-size:.78rem;letter-spacing:.18em;margin-bottom:10px;}
+  .lead h1{font-family:"Zen Maru Gothic";font-weight:900;color:var(--green-900);font-size:clamp(1.5rem,5.6vw,2.2rem);margin-bottom:10px;}
+  .lead p{color:#46514a;font-size:.96rem;}
+  .cards{display:grid;grid-template-columns:1fr;gap:22px;width:100%;max-width:860px;}
+  .card{
+    display:flex;flex-direction:column;background:#fff;border:1px solid #dfece4;border-radius:24px;overflow:hidden;
+    box-shadow:0 14px 36px rgba(18,63,44,.12);text-decoration:none;color:inherit;transition:transform .15s, box-shadow .15s;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 22px 50px rgba(18,63,44,.18);}
+  .thumb{height:170px;display:flex;align-items:center;justify-content:center;position:relative;}
+  .thumb.green{background:linear-gradient(160deg,#eef7f0,#d8eede);}
+  .thumb.bold{background:#1fa85a;background-image:radial-gradient(rgba(0,0,0,.06) 1.4px,transparent 1.5px);background-size:13px 13px;}
+  .thumb svg{filter:drop-shadow(0 8px 16px rgba(18,63,44,.18));}
+  .card .body{padding:22px 24px 26px;}
+  .tagline{font-family:"Zen Maru Gothic";font-weight:700;color:var(--green-900);font-size:1.25rem;margin-bottom:6px;}
+  .desc{color:#5e6d64;font-size:.9rem;margin-bottom:16px;}
+  .go{display:inline-flex;align-items:center;gap:8px;font-family:"Zen Maru Gothic";font-weight:700;color:#fff;background:var(--green);padding:11px 22px;border-radius:999px;font-size:.95rem;align-self:flex-start;box-shadow:0 8px 18px rgba(29,122,79,.3);}
+  .card.boldcard .go{background:var(--ink);box-shadow:4px 4px 0 var(--ink);}
+  .go svg{width:18px;height:18px;}
+  .note{margin-top:32px;font-size:.8rem;color:#6b756e;text-align:center;max-width:560px;}
+  @media (min-width:720px){.cards{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+  <div class="brand">
+    <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <rect x="2" y="2" width="44" height="44" rx="13" fill="#1d7a4f"/>
+      <path d="M13 17h22l-4 5H17l-4-5z" fill="#fff"/>
+      <path d="M13 24h22l-4 5H17l-4-5z" fill="#9fe0bd"/>
+      <path d="M13 31h22l-4 5H17l-4-5z" fill="#f09636"/>
+    </svg>
+    <span>
+      <span class="nm">株式会社三栄</span><br>
+      <span class="sub">SANEI LOGISTICS</span>
+    </span>
+  </div>
+
+  <div class="lead">
+    <span class="eyebrow">WEBSITE DESIGN PROPOSAL</span>
+    <h1>ホームページ デザイン 2案</h1>
+    <p>ご覧になりたいデザインをお選びください。どちらも内容は同じ、雰囲気だけが違います。</p>
+  </div>
+
+  <div class="cards">
+    <!-- 緑版 -->
+    <a class="card greencard" href="classic.html">
+      <div class="thumb green">
+        <svg width="150" height="96" viewBox="0 0 150 96" fill="none" aria-hidden="true">
+          <rect x="6" y="6" width="138" height="84" rx="12" fill="#fff" stroke="#cfe6d6" stroke-width="2"/>
+          <rect x="18" y="20" width="64" height="9" rx="4.5" fill="#1d7a4f"/>
+          <rect x="18" y="36" width="50" height="7" rx="3.5" fill="#9fd9b6"/>
+          <rect x="18" y="50" width="44" height="14" rx="7" fill="#f09636"/>
+          <rect x="98" y="22" width="36" height="50" rx="8" fill="#eef7f0" stroke="#cfe6d6" stroke-width="2"/>
+          <circle cx="116" cy="40" r="9" fill="#39a877"/>
+          <rect x="106" y="56" width="20" height="6" rx="3" fill="#bfe6cd"/>
+        </svg>
+      </div>
+      <div class="body">
+        <div class="tagline">落ち着いた緑版</div>
+        <div class="desc">信頼感・安心感を重視した、やわらかく上品な王道デザイン。</div>
+        <span class="go">このデザインを見る
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </div>
+    </a>
+
+    <!-- ボールド版 -->
+    <a class="card boldcard" href="bold.html">
+      <div class="thumb bold">
+        <svg width="150" height="96" viewBox="0 0 150 96" fill="none" aria-hidden="true">
+          <rect x="10" y="14" width="96" height="58" rx="10" fill="#fff" stroke="#141414" stroke-width="3"/>
+          <rect x="22" y="28" width="52" height="9" rx="2" fill="#141414"/>
+          <rect x="22" y="44" width="40" height="9" rx="2" fill="#1fa85a"/>
+          <rect x="112" y="60" width="30" height="14" rx="7" fill="#141414"/>
+          <circle cx="120" cy="30" r="9" fill="#fff" stroke="#141414" stroke-width="3"/>
+        </svg>
+      </div>
+      <div class="body">
+        <div class="tagline">ボールド版（手描き・大胆）</div>
+        <div class="desc">親しみ・インパクト重視。手描きイラストと太い輪郭の元気なデザイン。</div>
+        <span class="go">このデザインを見る
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </div>
+    </a>
+  </div>
+
+  <p class="note">＊これは見比べ用の入口ページです。本番では、お選びいただいた1案を正式なトップページに設定できます。</p>
+</body>
+</html>

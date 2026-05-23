@@ -1,0 +1,32 @@
+{
+  "size": { "width": 2500, "height": 1686 },
+  "selected": true,
+  "name": "三栄メインメニュー",
+  "chatBarText": "メニュー",
+  "areas": [
+    {
+      "bounds": { "x": 0, "y": 0, "width": 833, "height": 843 },
+      "action": { "type": "uri", "label": "電話する", "uri": "tel:[電話番号 例:03-0000-0000]" }
+    },
+    {
+      "bounds": { "x": 833, "y": 0, "width": 833, "height": 843 },
+      "action": { "type": "message", "label": "無料相談・お見積り", "text": "無料相談・お見積りをお願いします。" }
+    },
+    {
+      "bounds": { "x": 1666, "y": 0, "width": 834, "height": 843 },
+      "action": { "type": "uri", "label": "サービス紹介", "uri": "[ホームページURL]#service" }
+    },
+    {
+      "bounds": { "x": 0, "y": 843, "width": 833, "height": 843 },
+      "action": { "type": "uri", "label": "よくある質問", "uri": "[ホームページURL]#faq" }
+    },
+    {
+      "bounds": { "x": 833, "y": 843, "width": 833, "height": 843 },
+      "action": { "type": "uri", "label": "アクセス・会社情報", "uri": "[ホームページURL]#company" }
+    },
+    {
+      "bounds": { "x": 1666, "y": 843, "width": 834, "height": 843 },
+      "action": { "type": "uri", "label": "ホームページ", "uri": "[ホームページURL]" }
+    }
+  ]
+}

@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社三栄｜あらゆる物流をワンストップで。困ったときに電話したくなる物流会社</title>
+<meta name="description" content="株式会社三栄は、在庫管理・倉庫・梱包・輸送・輸出入通関・海外引っ越し・包装資材販売まで、あらゆる物流をワンストップでお引き受けします。一点大物の輸出梱包に強く、レスポンスの速さと温かい対応に定評。対応エリアは埼玉・群馬・東京・千葉・栃木・茨城。">
+<!-- 外部依存は Google Fonts のみ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=M+PLUS+Rounded+1c:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* =========================================================
+     カラー・基本設定（グリーン基調＝親しみ・安心＋信頼感、
+     温かみのオレンジをアクセントに）
+  ========================================================= */
+  :root{
+    --green-900:#123f2c;
+    --green-800:#16573a;
+    --green-700:#1d7a4f;   /* メイングリーン */
+    --green-600:#239160;
+    --green-500:#39a877;
+    --green-100:#e3f2e8;
+    --green-50:#f2f9f4;
+    --accent:#f09636;       /* 温かみのオレンジ */
+    --accent-dark:#dd7d18;
+    --ink:#22302a;
+    --muted:#5e6d64;
+    --line:#e2eae4;
+    --cream:#fbf8f1;
+    --white:#ffffff;
+    --shadow:0 10px 30px rgba(18,63,44,.10);
+    --shadow-sm:0 4px 14px rgba(18,63,44,.08);
+    --radius:18px;
+    --radius-lg:26px;
+    --maxw:1080px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:74px;}
+  body{
+    margin:0;
+    font-family:"M PLUS Rounded 1c",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.85;
+    font-weight:400;
+    letter-spacing:.01em;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4,.font-head{font-family:"Zen Maru Gothic",sans-serif;font-weight:700;line-height:1.4;}
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;max-width:100%;}
+  ul{margin:0;padding:0;list-style:none;}
+  p{margin:0 0 1em;}
+
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+  .section{padding:64px 0;}
+  .section.alt{background:var(--green-50);}
+  .section.cream{background:var(--cream);}
+
+  /* 見出し共通 */
+  .sec-head{text-align:center;margin-bottom:36px;}
+  .sec-head .eyebrow{
+    display:inline-block;color:var(--green-700);font-weight:700;
+    font-size:.82rem;letter-spacing:.18em;margin-bottom:8px;
+  }
+  .sec-head h2{
+    font-size:clamp(1.5rem,5.4vw,2.2rem);margin:0 0 10px;color:var(--green-900);
+  }
+  .sec-head p{color:var(--muted);font-size:.96rem;margin:0;}
+
+  /* ボタン */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:14px 26px;border-radius:999px;font-family:"Zen Maru Gothic",sans-serif;
+    font-weight:700;font-size:1rem;cursor:pointer;border:none;transition:.2s;
+    white-space:nowrap;text-align:center;line-height:1.3;
+  }
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 18px rgba(221,125,24,.35);}
+  .btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);}
+  .btn-line{background:#06C755;color:#fff;box-shadow:0 8px 18px rgba(6,199,85,.3);}
+  .btn-line:hover{filter:brightness(.95);transform:translateY(-2px);}
+  .btn-ghost{background:#fff;color:var(--green-700);border:2px solid var(--green-100);}
+  .btn-ghost:hover{border-color:var(--green-500);transform:translateY(-2px);}
+  .btn svg{width:20px;height:20px;flex:none;}
+
+  /* =========================================================
+     ヘッダー / ナビ
+  ========================================================= */
+  header{
+    position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);
+    backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{display:flex;align-items:center;gap:10px;min-width:0;}
+  .brand .mark{width:44px;height:44px;flex:none;}
+  .brand .name-block{display:flex;flex-direction:column;line-height:1.1;min-width:0;}
+  .logo-name{
+    font-family:"Zen Maru Gothic",sans-serif;font-weight:900;
+    font-size:1.5rem;color:var(--green-800);
+    white-space:nowrap;          /* 社名は絶対に改行させない */
+    letter-spacing:.02em;
+  }
+  .logo-sub{font-size:.64rem;color:var(--muted);white-space:nowrap;letter-spacing:.08em;}
+
+  .nav-links{display:flex;align-items:center;gap:2px;}
+  .nav-links a{
+    padding:8px 9px;border-radius:10px;font-size:.9rem;font-weight:500;color:var(--ink);
+    white-space:nowrap;transition:.15s;            /* ナビ項目は折り返さない */
+  }
+  .nav-links a:hover{background:var(--green-50);color:var(--green-700);}
+  .nav-cta{margin-left:6px;}
+  .nav-cta .btn{padding:10px 18px;font-size:.9rem;}
+
+  .hamburger{
+    display:none;width:44px;height:44px;border:none;background:transparent;cursor:pointer;
+    padding:10px;border-radius:12px;
+  }
+  .hamburger span{display:block;height:2.5px;background:var(--green-800);border-radius:2px;margin:5px 0;transition:.25s;}
+  .hamburger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg);}
+  .hamburger.open span:nth-child(2){opacity:0;}
+  .hamburger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg);}
+
+  /* =========================================================
+     ヒーロー
+  ========================================================= */
+  .hero{position:relative;background:
+      radial-gradient(1200px 600px at 80% -10%, var(--green-100), transparent 60%),
+      linear-gradient(180deg,#fff 0%,var(--green-50) 100%);
+    overflow:hidden;padding:48px 0 56px;}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:28px;align-items:center;}
+  .eyebrow-pill{
+    display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--green-100);
+    color:var(--green-700);font-weight:700;font-size:.78rem;letter-spacing:.06em;
+    padding:7px 14px;border-radius:999px;box-shadow:var(--shadow-sm);margin-bottom:18px;
+  }
+  .eyebrow-pill svg{width:15px;height:15px;}
+  .hero h1{
+    color:var(--green-900);margin:0 0 18px;
+    /* 最長行「そんな物流会社です。」=10文字が320px幅でも収まるよう調整 */
+    font-size:clamp(1.5rem,7.2vw,3.6rem);
+    font-weight:900;line-height:1.34;letter-spacing:0;
+    white-space:nowrap;            /* 自動折り返し禁止。改行は<br>で制御 */
+  }
+  .hero h1 .accent{color:var(--green-700);}
+  .hero h1 .hl{
+    background:linear-gradient(transparent 62%, rgba(240,150,54,.4) 62%);
+    padding:0 .05em;
+  }
+  .hero-sub{
+    font-size:clamp(.95rem,3.6vw,1.12rem);color:#3c4b43;max-width:34em;
+    margin:0 0 26px;font-weight:500;
+  }
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:22px;}
+  .hero-cta .btn{flex:1 1 auto;min-width:150px;}
+  .hero-trust{display:flex;flex-wrap:wrap;gap:10px 18px;font-size:.84rem;color:var(--green-800);font-weight:500;}
+  .hero-trust span{display:inline-flex;align-items:center;gap:6px;}
+  .hero-trust svg{width:16px;height:16px;color:var(--green-600);flex:none;}
+
+  /* ヒーロー：ワンストップの流れ（横いっぱいの大きな図解） */
+  .flow{text-align:center;}
+  .flow-cap{display:inline-block;background:var(--green-700);color:#fff;font-family:"Zen Maru Gothic";font-weight:700;font-size:.95rem;padding:9px 20px;border-radius:999px;margin-bottom:20px;box-shadow:var(--shadow-sm);}
+  .flow-track{display:flex;align-items:stretch;justify-content:center;gap:10px;}
+  .flow-step{flex:1;min-width:0;background:#fff;border:1px solid var(--green-100);border-radius:24px;box-shadow:var(--shadow);padding:38px 14px 26px;position:relative;}
+  .flow-step .badge{position:absolute;top:16px;left:50%;transform:translateX(-50%);width:32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;font-family:"Zen Maru Gothic";font-weight:700;display:flex;align-items:center;justify-content:center;font-size:.95rem;box-shadow:0 4px 10px rgba(221,125,24,.32);}
+  .flow-step .ic{width:clamp(70px,15vw,104px);height:clamp(70px,15vw,104px);margin:24px auto 16px;border-radius:26px;background:var(--green-50);display:flex;align-items:center;justify-content:center;}
+  .flow-step .ic svg{width:54%;height:54%;color:var(--green-700);}
+  .flow-step .lbl{font-family:"Zen Maru Gothic";font-weight:700;font-size:clamp(1.05rem,3.6vw,1.35rem);color:var(--green-900);}
+  .flow-arrow{flex:0 0 auto;display:flex;align-items:center;color:var(--accent);}
+  .flow-arrow svg{width:30px;height:30px;}
+  @media (max-width:680px){
+    .flow-track{flex-wrap:wrap;gap:12px;}
+    .flow-step{flex:1 1 calc(50% - 6px);}
+    .flow-arrow{display:none;}
+  }
+
+  /* 対応エリア帯 */
+  .strip{background:var(--green-700);color:#fff;}
+  .strip .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 14px;padding-top:16px;padding-bottom:16px;text-align:center;}
+  .strip .lead{font-family:"Zen Maru Gothic",sans-serif;font-weight:700;font-size:.95rem;}
+  .strip .areas{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;}
+  .strip .areas b{background:rgba(255,255,255,.16);border-radius:999px;padding:4px 12px;font-size:.82rem;font-weight:500;}
+
+  /* =========================================================
+     サービス
+  ========================================================= */
+  .cards{display:grid;grid-template-columns:1fr;gap:16px;}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px 22px;box-shadow:var(--shadow-sm);transition:.2s;position:relative;overflow:hidden;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--green-100);}
+  .card .ic{
+    width:54px;height:54px;border-radius:14px;background:var(--green-50);
+    display:flex;align-items:center;justify-content:center;margin-bottom:14px;
+  }
+  .card .ic svg{width:30px;height:30px;color:var(--green-700);}
+  .card h3{font-size:1.12rem;margin:0 0 8px;color:var(--green-900);}
+  .card p{font-size:.92rem;color:var(--muted);margin:0;}
+  .card .tag{position:absolute;top:14px;right:14px;background:var(--accent);color:#fff;font-size:.66rem;font-weight:700;padding:3px 9px;border-radius:999px;font-family:"Zen Maru Gothic";}
+
+  /* =========================================================
+     強み
+  ========================================================= */
+  .strength-lead{
+    background:linear-gradient(135deg,var(--green-700),var(--green-600));color:#fff;
+    border-radius:var(--radius-lg);padding:30px 26px;margin-bottom:22px;text-align:center;
+    box-shadow:var(--shadow);
+  }
+  .strength-lead h3{color:#fff;font-size:clamp(1.2rem,5vw,1.7rem);margin:0 0 10px;}
+  .strength-lead p{color:rgba(255,255,255,.92);font-size:.95rem;margin:0;}
+  .str-grid{display:grid;grid-template-columns:1fr;gap:14px;}
+  .str-item{
+    display:flex;gap:15px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px;box-shadow:var(--shadow-sm);
+  }
+  .str-item .num{
+    flex:none;width:42px;height:42px;border-radius:12px;
+    background:var(--green-50);color:var(--green-700);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .str-item .num svg{width:24px;height:24px;}
+  .str-item h4{font-size:1.04rem;margin:0 0 5px;color:var(--green-900);}
+  .str-item p{font-size:.9rem;color:var(--muted);margin:0;}
+
+  /* かんたん相談（簡易見積もり） */
+  .quote{
+    background:#fff;border:2px solid var(--green-100);border-radius:var(--radius-lg);
+    padding:26px 22px;box-shadow:var(--shadow);
+  }
+  .quote h3{font-size:1.2rem;color:var(--green-900);margin:0 0 4px;}
+  .quote .hint{font-size:.86rem;color:var(--muted);margin:0 0 18px;}
+  .q-row{margin-bottom:14px;}
+  .q-row label{display:block;font-size:.82rem;font-weight:700;color:var(--green-800);margin-bottom:6px;}
+  .q-row select,.q-row input,.q-row textarea{
+    width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;
+    font-family:inherit;font-size:.95rem;color:var(--ink);background:#fff;
+  }
+  .q-row select:focus,.q-row input:focus,.q-row textarea:focus{outline:none;border-color:var(--green-500);box-shadow:0 0 0 3px var(--green-100);}
+  .q-out{
+    background:var(--green-50);border-radius:14px;padding:16px;font-size:.9rem;
+    color:var(--green-900);margin:6px 0 16px;display:none;
+  }
+  .q-out.show{display:block;}
+  .q-out b{color:var(--green-700);}
+
+  /* =========================================================
+     実績・お客様の声
+  ========================================================= */
+  .note-sample{font-size:.78rem;color:var(--muted);text-align:center;margin-top:18px;}
+  .clients{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:30px;}
+  .client-chip{
+    background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;
+    display:flex;align-items:center;gap:10px;box-shadow:var(--shadow-sm);font-size:.85rem;font-weight:500;color:var(--green-900);
+  }
+  .client-chip svg{width:22px;height:22px;color:var(--green-600);flex:none;}
+  .client-chip .badge{font-size:.6rem;background:var(--green-100);color:var(--green-700);padding:2px 7px;border-radius:999px;font-weight:700;}
+
+  .voices{display:grid;grid-template-columns:1fr;gap:16px;}
+  .voice{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;
+    box-shadow:var(--shadow-sm);position:relative;
+  }
+  .voice .quotemark{font-family:Georgia,serif;font-size:3rem;line-height:1;color:var(--green-100);position:absolute;top:10px;right:18px;}
+  .voice .stars{color:var(--accent);font-size:.95rem;letter-spacing:.1em;margin-bottom:10px;}
+  .voice p{font-size:.92rem;color:#3c4b43;margin:0 0 14px;position:relative;z-index:1;}
+  .voice .who{display:flex;align-items:center;gap:10px;font-size:.82rem;color:var(--muted);}
+  .voice .who .av{width:38px;height:38px;border-radius:50%;background:var(--green-50);display:flex;align-items:center;justify-content:center;flex:none;}
+  .voice .who .av svg{width:22px;height:22px;color:var(--green-600);}
+  .voice .who .badge{font-size:.6rem;background:var(--cream);border:1px solid var(--line);color:var(--muted);padding:2px 7px;border-radius:999px;}
+
+  /* =========================================================
+     豆知識
+  ========================================================= */
+  .tips{display:grid;grid-template-columns:1fr;gap:14px;}
+  .tip{
+    display:flex;gap:14px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px;box-shadow:var(--shadow-sm);
+  }
+  .tip .ti{flex:none;width:46px;height:46px;border-radius:12px;background:var(--cream);display:flex;align-items:center;justify-content:center;}
+  .tip .ti svg{width:26px;height:26px;color:var(--accent-dark);}
+  .tip h4{font-size:1rem;margin:0 0 5px;color:var(--green-900);}
+  .tip p{font-size:.88rem;color:var(--muted);margin:0;}
+
+  /* =========================================================
+     FAQ
+  ========================================================= */
+  .faq{max-width:760px;margin:0 auto;}
+  details.qa{
+    background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;
+    box-shadow:var(--shadow-sm);overflow:hidden;
+  }
+  details.qa summary{
+    list-style:none;cursor:pointer;padding:18px 52px 18px 20px;position:relative;
+    font-family:"Zen Maru Gothic",sans-serif;font-weight:700;font-size:.98rem;color:var(--green-900);
+  }
+  details.qa summary::-webkit-details-marker{display:none;}
+  details.qa summary::before{content:"Q";position:absolute;left:20px;display:none;}
+  details.qa summary .qmark{color:var(--green-600);font-weight:900;margin-right:10px;}
+  details.qa summary::after{
+    content:"";position:absolute;right:20px;top:50%;width:10px;height:10px;
+    border-right:2.5px solid var(--green-600);border-bottom:2.5px solid var(--green-600);
+    transform:translateY(-70%) rotate(45deg);transition:.25s;
+  }
+  details.qa[open] summary::after{transform:translateY(-30%) rotate(-135deg);}
+  details.qa .ans{padding:0 20px 20px;font-size:.92rem;color:var(--muted);}
+  details.qa .ans .a-label{color:var(--accent-dark);font-weight:900;margin-right:8px;}
+
+  /* =========================================================
+     会社情報・アクセス
+  ========================================================= */
+  .company-grid{display:grid;grid-template-columns:1fr;gap:24px;}
+  .info-table{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);}
+  .info-table dl{margin:0;}
+  .info-row{display:flex;border-bottom:1px solid var(--line);}
+  .info-row:last-child{border-bottom:none;}
+  .info-row dt{
+    flex:none;width:38%;background:var(--green-50);padding:14px 16px;font-weight:700;
+    font-size:.85rem;color:var(--green-800);font-family:"Zen Maru Gothic";
+  }
+  .info-row dd{margin:0;padding:14px 16px;font-size:.9rem;color:var(--ink);}
+  .ph{color:#9aa79f;}  /* プレースホルダ表示 */
+
+  .area-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow-sm);}
+  .area-card h4{margin:0 0 4px;color:var(--green-900);font-size:1.05rem;}
+  .area-card .sub{font-size:.82rem;color:var(--muted);margin:0 0 14px;}
+  .area-card .map-note{font-size:.74rem;color:#9aa79f;margin-top:12px;text-align:center;}
+
+  /* =========================================================
+     採用バナー
+  ========================================================= */
+  .recruit{
+    background:linear-gradient(135deg,var(--green-800),var(--green-600));border-radius:var(--radius-lg);
+    color:#fff;padding:34px 26px;text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden;
+  }
+  .recruit h3{color:#fff;font-size:clamp(1.25rem,5vw,1.8rem);margin:0 0 10px;}
+  .recruit p{color:rgba(255,255,255,.92);font-size:.95rem;margin:0 0 20px;max-width:30em;margin-left:auto;margin-right:auto;}
+  .recruit .btn-ghost{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.4);}
+  .recruit .btn-ghost:hover{background:rgba(255,255,255,.24);}
+
+  /* =========================================================
+     問い合わせ
+  ========================================================= */
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:24px;}
+  .contact-methods{display:grid;gap:12px;}
+  .cm{
+    display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);
+    border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow-sm);transition:.2s;
+  }
+  .cm:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+  .cm .ci{flex:none;width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;}
+  .cm .ci svg{width:26px;height:26px;}
+  .cm.tel .ci{background:var(--green-50);} .cm.tel .ci svg{color:var(--green-700);}
+  .cm.mail .ci{background:#fdf1e3;} .cm.mail .ci svg{color:var(--accent-dark);}
+  .cm.line .ci{background:#e6f9ee;} .cm.line .ci svg{color:#06C755;}
+  .cm .ctxt{min-width:0;}
+  .cm .ctxt .lbl{font-size:.74rem;color:var(--muted);font-weight:500;}
+  .cm .ctxt .val{font-family:"Zen Maru Gothic";font-weight:700;color:var(--green-900);font-size:1.08rem;line-height:1.3;}
+  .cm .ctxt .note{font-size:.74rem;color:var(--muted);}
+
+  .form-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:26px 22px;box-shadow:var(--shadow);}
+  .form-card h3{margin:0 0 4px;font-size:1.2rem;color:var(--green-900);}
+  .form-card .hint{font-size:.84rem;color:var(--muted);margin:0 0 18px;}
+  .form-card .submit{width:100%;margin-top:6px;}
+
+  /* =========================================================
+     フッター
+  ========================================================= */
+  footer{background:var(--green-900);color:rgba(255,255,255,.85);padding:40px 0 28px;}
+  footer .foot-top{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;margin-bottom:24px;}
+  footer .f-brand{display:flex;align-items:center;gap:10px;}
+  footer .f-brand .logo-name{color:#fff;}
+  footer .f-brand .logo-sub{color:rgba(255,255,255,.6);}
+  footer nav{display:flex;flex-wrap:wrap;gap:6px 18px;}
+  footer nav a{font-size:.86rem;color:rgba(255,255,255,.8);}
+  footer nav a:hover{color:#fff;}
+  footer .copy{border-top:1px solid rgba(255,255,255,.14);padding-top:18px;font-size:.76rem;color:rgba(255,255,255,.6);text-align:center;}
+
+  /* 浮遊CTA（スマホ） */
+  .float-cta{
+    position:fixed;left:0;right:0;bottom:0;z-index:90;display:none;
+    background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);
+    padding:9px 12px;gap:8px;box-shadow:0 -6px 20px rgba(18,63,44,.1);
+  }
+  .float-cta .btn{flex:1;padding:12px;font-size:.92rem;}
+
+  /* =========================================================
+     レスポンシブ（モバイルファースト → 拡張）
+  ========================================================= */
+  @media (min-width:600px){
+    .cards{grid-template-columns:repeat(2,1fr);}
+    .str-grid{grid-template-columns:repeat(2,1fr);}
+    .voices{grid-template-columns:repeat(2,1fr);}
+    .tips{grid-template-columns:repeat(2,1fr);}
+    .contact-methods{grid-template-columns:repeat(3,1fr);}
+  }
+  @media (min-width:860px){
+    .section{padding:84px 0;}
+    .hero{padding:64px 0 72px;}
+    .hero-grid{grid-template-columns:1fr;gap:38px;}
+    .hero-cta .btn{flex:0 0 auto;}
+    .cards{grid-template-columns:repeat(3,1fr);}
+    .company-grid{grid-template-columns:1.1fr .9fr;align-items:start;}
+    .contact-grid{grid-template-columns:1fr 1fr;align-items:start;}
+    .contact-methods{grid-template-columns:1fr;}
+  }
+
+  /* スマホ・タブレット調整（ナビは余裕が出る940px以上で横並びに） */
+  @media (max-width:939px){
+    .nav-links{
+      position:fixed;top:64px;left:0;right:0;background:#fff;flex-direction:column;
+      align-items:stretch;gap:0;padding:8px 16px 18px;border-bottom:1px solid var(--line);
+      box-shadow:var(--shadow);transform:translateY(-130%);transition:transform .3s ease;
+      max-height:calc(100vh - 64px);overflow:auto;
+    }
+    .nav-links.open{transform:translateY(0);}
+    .nav-links a{padding:13px 10px;border-bottom:1px solid var(--green-50);font-size:1rem;}
+    .nav-cta{margin:10px 0 0;}
+    .nav-cta .btn{width:100%;padding:13px;}
+    .hamburger{display:block;}
+    .float-cta{display:flex;}
+    body{padding-bottom:62px;} /* 浮遊CTAの分 */
+  }
+  @media (max-width:380px){
+    .logo-name{font-size:1.24rem;}   /* 社名はスマホで少しだけ小さく（それでも従来より大きめ） */
+    .logo-sub{font-size:.58rem;}
+    .brand .mark{width:38px;height:38px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none!important;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============== ヘッダー ============== -->
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="株式会社三栄 トップへ">
+      <!-- ロゴマーク（仮）：三つの矢羽根を重ねた「三栄」のS/三イメージ -->
+      <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <rect x="2" y="2" width="44" height="44" rx="13" fill="#1d7a4f"/>
+        <path d="M13 17h22l-4 5H17l-4-5z" fill="#fff"/>
+        <path d="M13 24h22l-4 5H17l-4-5z" fill="#9fe0bd"/>
+        <path d="M13 31h22l-4 5H17l-4-5z" fill="#f09636"/>
+      </svg>
+      <span class="name-block">
+        <span class="logo-name">株式会社三栄</span>
+        <span class="logo-sub">SANEI LOGISTICS</span>
+      </span>
+    </a>
+
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#service">サービス</a></li>
+        <li><a href="#strength">強み</a></li>
+        <li><a href="#works">実績・声</a></li>
+        <li><a href="#tips">豆知識</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#company">会社情報</a></li>
+        <li><a href="#recruit">採用</a></li>
+        <li class="nav-cta"><a class="btn btn-primary" href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============== ヒーロー ============== -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <span class="eyebrow-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18" stroke-linecap="round"/></svg>
+        埼玉発・あらゆる物流のワンストップパートナー
+      </span>
+      <h1>
+        困ったときに、<br>
+        <span class="accent hl">電話したくなる</span>。<br>
+        そんな物流会社です。
+      </h1>
+      <p class="hero-sub">
+        在庫管理・倉庫から、輸送・通関・海外引っ越し、そして一点大物の輸出梱包まで。<br>
+        「これ、どうしよう」を、まるごと解決します。
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" stroke-linejoin="round"/></svg>
+          無料で相談する
+        </a>
+        <a class="btn btn-line" href="[LINE公式アカウントのURL]" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.69 2 10.23c0 4.07 3.55 7.48 8.34 8.13.32.07.77.22.88.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.92C21.36 13.66 22 12 22 10.23 22 5.69 17.52 2 12 2z"/></svg>
+          LINEで相談
+        </a>
+      </div>
+      <div class="hero-trust">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>プライム上場企業との取引実績</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>レスポンスの速さに定評</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>包装資材も格安でご提供</span>
+      </div>
+    </div>
+
+    <!-- ワンストップの流れ（横いっぱいの大きな図解） -->
+    <div class="flow" aria-label="保管・梱包・輸送・世界へ の流れ">
+      <span class="flow-cap">あらゆる物流を、ワンストップで</span>
+      <div class="flow-track">
+        <div class="flow-step">
+          <span class="badge">1</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9z" stroke-linejoin="round"/><path d="M7 21V12h10v9M7 15h10" stroke-linejoin="round"/></svg></div>
+          <div class="lbl">保管</div>
+        </div>
+        <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="flow-step">
+          <span class="badge">2</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 8l-9 4-9-4 9-4 9 4z" stroke-linejoin="round"/><path d="M3 8v8l9 4 9-4V8M12 12v8" stroke-linejoin="round"/></svg></div>
+          <div class="lbl">梱包</div>
+        </div>
+        <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="flow-step">
+          <span class="badge">3</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M1 5h13v11H1zM14 8h4l3 3v5h-7" stroke-linejoin="round"/><circle cx="5.5" cy="18" r="2"/><circle cx="17.5" cy="18" r="2"/></svg></div>
+          <div class="lbl">輸送</div>
+        </div>
+        <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="flow-step">
+          <span class="badge">4</span>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></div>
+          <div class="lbl">世界へ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 対応エリア帯 ============== -->
+<div class="strip">
+  <div class="wrap">
+    <span class="lead">あらゆる物流を、ワンストップで。&nbsp;対応エリア：</span>
+    <span class="areas">
+      <b>埼玉</b><b>群馬</b><b>東京</b><b>千葉</b><b>栃木</b><b>茨城</b>
+    </span>
+  </div>
+</div>
+
+<!-- ============== サービス ============== -->
+<section class="section" id="service">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">SERVICE</span>
+      <h2>「物流のこと、全部おまかせ」が叶う</h2>
+      <p>保管から輸送、海を越える梱包・通関まで。窓口ひとつで、まるごとお引き受けします。</p>
+    </div>
+    <div class="cards">
+
+      <article class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9z" stroke-linejoin="round"/><path d="M7 21V12h10v9M7 15h10" stroke-linejoin="round"/></svg></div>
+        <h3>在庫管理・倉庫</h3>
+        <p>入出庫・保管・棚卸まで一元管理。在庫の「見える化」で、欠品も過剰在庫も防ぎます。小ロット・スポットもOK。</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">得意分野</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 8l-9 4-9-4 9-4 9 4z" stroke-linejoin="round"/><path d="M3 8v8l9 4 9-4V8M12 12v8" stroke-linejoin="round"/></svg></div>
+        <h3>梱包・輸出梱包</h3>
+        <p>木箱は<b>自社製造</b>。中身にぴったり合うサイズで、大物・精密品から<b>化学品</b>まで隙間なく梱包します。真空・防錆・バリア梱包にも対応し、クレイモデルのような一点物の輸出も安心です。</p>
+      </article>
+
+      <article class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M1 5h13v11H1zM14 8h4l3 3v5h-7" stroke-linejoin="round"/><circle cx="5.5" cy="18" r="2"/><circle cx="17.5" cy="18" r="2"/></svg></div>
+        <h3>輸送・配送</h3>
+        <p>関東一円をカバー。チャーター便から定期便、緊急配送まで。荷姿に合わせた最適な輸送手段をご提案します。</p>
+      </article>
+
+      <article class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke-linejoin="round"/><path d="M14 2v6h6M8 13h8M8 17h5" stroke-linecap="round"/></svg></div>
+        <h3>輸出入通関</h3>
+        <p>複雑な通関手続きも丸ごとサポート。書類作成から手配までワンストップで、海外取引のハードルを下げます。</p>
+      </article>
+
+      <article class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18" /></svg></div>
+        <h3>海外引っ越し</h3>
+        <p>大切なお荷物を、海を越えて安全に。梱包・輸送・通関まで一貫対応で、はじめての海外移転も心強くサポート。</p>
+      </article>
+
+      <article class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 8l9-5 9 5v8l-9 5-9-5z" stroke-linejoin="round"/><path d="M3 8l9 5 9-5M12 13v8" /><path d="M7.5 5.5l9 5" /></svg></div>
+        <h3>包装資材の販売</h3>
+        <p>段ボール・緩衝材・防錆資材などを格安でご提供。「資材だけ欲しい」も大歓迎。最適な資材選びもご相談ください。</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============== 強み ============== -->
+<section class="section alt" id="strength">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">STRENGTH</span>
+      <h2>規模は中小、底力は一流。</h2>
+      <p>大手にはない小回りと、専門メーカーにも頼られる技術力。その両方を持っているのが三栄です。</p>
+    </div>
+
+    <div class="strength-lead">
+      <h3>「困ったら、まず三栄に電話」<br>そう言っていただける理由があります。</h3>
+      <p>速さ・提案力・温かい対応。当たり前のことを、誰よりも丁寧に。それが私たちの誇りです。</p>
+    </div>
+
+    <div class="str-grid">
+      <div class="str-item">
+        <div class="num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div><h4>プライム上場企業も信頼する品質</h4><p>名だたる大手企業の物流を任されてきた実績。その基準で、すべてのお客様に向き合います。</p></div>
+      </div>
+      <div class="str-item">
+        <div class="num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 8l-9 4-9-4 9-4 9 4z" stroke-linejoin="round"/><path d="M3 8v8l9 4 9-4V8" stroke-linejoin="round"/></svg></div>
+        <div><h4>大物・精密・化学品まで、輸出梱包に強い</h4><p>クレイモデルのような繊細で大きな一点物から、取り扱いに気を遣う化学品まで。中身に応じた最適梱包で、海を越えて無事にお届けします。</p></div>
+      </div>
+      <div class="str-item">
+        <div class="num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8l9-5 9 5v8l-9 5-9-5z" stroke-linejoin="round"/><path d="M3 8l9 5 9-5" stroke-linejoin="round"/><rect x="9" y="9.5" width="6" height="5" rx="1"/></svg></div>
+        <div><h4>木箱は自社製造。ぴったりサイズで梱包</h4><p>箱を自前でつくれるから、中身に合わせた寸法で梱包できます。隙間も過剰包装もなく、品質もコストもムダなく最適化します。</p></div>
+      </div>
+      <div class="str-item">
+        <div class="num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18h6M10 21h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V17h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z" stroke-linejoin="round"/></svg></div>
+        <div><h4>「もっと良くなる」を一緒に考える提案力</h4><p>言われた通りに運ぶだけではありません。梱包改善やコスト削減を、こちらから積極的にご提案します。</p></div>
+      </div>
+      <div class="str-item">
+        <div class="num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L4.5 13H11l-1 9 8.5-11H12z" stroke-linejoin="round"/></svg></div>
+        <div><h4>レスポンスが、段違いに速い</h4><p>「すぐ返事がくる」だけで、仕事は驚くほどスムーズに。スピードは三栄の約束です。</p></div>
+      </div>
+      <div class="str-item">
+        <div class="num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.4-9.5-8.5C.8 9.6 2.3 6 5.5 6c2 0 3.3 1.3 4.5 3 1.2-1.7 2.5-3 4.5-3 3.2 0 4.7 3.6 3 6.5C19 16.6 12 21 12 21z" stroke-linejoin="round"/></svg></div>
+        <div><h4>温かみのある、人の対応</h4><p>機械的なやりとりはしません。困ったときに頼りたくなる、そんな顔の見える関係を大切にします。</p></div>
+      </div>
+      <div class="str-item">
+        <div class="num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5C14 8.5 13 8 12 8c-1.5 0-2.5 1-2.5 2s1 1.6 2.5 2 2.5 1 2.5 2-1 2-2.5 2c-1 0-2-.5-2.5-1.5M12 6.5v11" stroke-linecap="round"/></svg></div>
+        <div><h4>包装資材も、格安でご提供</h4><p>物流のプロだからこそ実現できる仕入れ力。資材コストの見直しも、まずはご相談ください。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== かんたん相談（簡易見積もり） ============== -->
+<section class="section" id="quote">
+  <div class="wrap" style="max-width:720px;">
+    <div class="sec-head">
+      <span class="eyebrow">QUICK CONTACT</span>
+      <h2>30秒で、相談内容を整理</h2>
+      <p>選ぶだけで相談メモが完成。そのままメール・LINEで送れます。料金は内容により個別お見積り（無料）。</p>
+    </div>
+    <div class="quote">
+      <h3>かんたん相談メモ</h3>
+      <p class="hint">＊概算のご相談用です。詳しいお見積りは内容を伺ったうえで無料でご提示します。</p>
+      <div class="q-row">
+        <label for="q-service">ご相談したいこと</label>
+        <select id="q-service">
+          <option value="">選んでください</option>
+          <option>在庫管理・倉庫保管</option>
+          <option>梱包・輸出梱包（大物・精密・化学品）</option>
+          <option>輸送・配送</option>
+          <option>輸出入通関</option>
+          <option>海外引っ越し</option>
+          <option>包装資材の購入</option>
+          <option>どれに当てはまるか分からない</option>
+        </select>
+      </div>
+      <div class="q-row">
+        <label for="q-area">エリア（発送元または保管場所）</label>
+        <select id="q-area">
+          <option value="">選んでください</option>
+          <option>埼玉</option><option>群馬</option><option>東京</option>
+          <option>千葉</option><option>栃木</option><option>茨城</option>
+          <option>その他・海外</option>
+        </select>
+      </div>
+      <div class="q-row">
+        <label for="q-detail">かんたんな内容・ご希望（任意）</label>
+        <textarea id="q-detail" rows="2" placeholder="例）クレイモデル1点をアメリカへ。木箱梱包と通関までお願いしたい。"></textarea>
+      </div>
+      <div class="q-out" id="qOut"></div>
+      <div class="hero-cta">
+        <a class="btn btn-primary" id="qMail" href="#contact">この内容でメール相談</a>
+        <a class="btn btn-line" id="qLine" href="[LINE公式アカウントのURL]" target="_blank" rel="noopener">LINEで相談</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 実績・お客様の声 ============== -->
+<section class="section cream" id="works">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">WORKS &amp; VOICE</span>
+      <h2>多くの企業の「縁の下」を支えています</h2>
+      <p>業種・規模を問わず、物流のお困りごとに伴走してきました。</p>
+    </div>
+
+    <div class="clients">
+      <div class="client-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>プライム上場 自動車メーカー様<span class="badge">サンプル</span></div>
+      <div class="client-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21V7l9-4 9 4v14M3 21h18M8 21v-6h8v6"/></svg>大手機械メーカー様<span class="badge">サンプル</span></div>
+      <div class="client-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg>精密機器メーカー様<span class="badge">サンプル</span></div>
+      <div class="client-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16v13H4zM8 7V4h8v3"/></svg>商社・卸売業様<span class="badge">サンプル</span></div>
+    </div>
+
+    <div class="voices">
+      <article class="voice">
+        <span class="quotemark">&rdquo;</span>
+        <div class="stars">★★★★★</div>
+        <p>急な海外輸送の相談に、その日のうちに動いてくれました。大物の梱包も「ここまでやるのか」という丁寧さ。安心して任せられます。</p>
+        <div class="who"><span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><div>製造業 ご担当者様<span class="badge">サンプル</span></div></div>
+      </article>
+      <article class="voice">
+        <span class="quotemark">&rdquo;</span>
+        <div class="stars">★★★★★</div>
+        <p>とにかく返事が速い。こちらが迷っているうちに最適案を出してくれる。困ったらまず三栄さんに電話、が口ぐせになりました。</p>
+        <div class="who"><span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><div>商社 ご担当者様<span class="badge">サンプル</span></div></div>
+      </article>
+      <article class="voice">
+        <span class="quotemark">&rdquo;</span>
+        <div class="stars">★★★★★</div>
+        <p>梱包資材の見直しを提案いただき、コストを抑えつつ品質も向上。言われたことをやるだけでない、一緒に考えてくれる物流会社です。</p>
+        <div class="who"><span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><div>機械メーカー ご担当者様<span class="badge">サンプル</span></div></div>
+      </article>
+      <article class="voice">
+        <span class="quotemark">&rdquo;</span>
+        <div class="stars">★★★★★</div>
+        <p>はじめての海外引っ越しで不安でしたが、通関まで全部お任せでき、終始あたたかく対応いただきました。本当に助かりました。</p>
+        <div class="who"><span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><div>法人ご担当者様<span class="badge">サンプル</span></div></div>
+      </article>
+    </div>
+    <p class="note-sample">＊掲載の取引先カテゴリ・お客様の声は、見本用のサンプルです。公開時には実際の内容に差し替えてください。</p>
+  </div>
+</section>
+
+<!-- ============== 豆知識 ============== -->
+<section class="section" id="tips">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">KNOWLEDGE</span>
+      <h2>知ってトクする、輸出梱包の豆知識</h2>
+      <p>「海を渡る荷物」には、国内輸送とは違うコツがあります。プロの視点を少しだけご紹介。</p>
+    </div>
+    <div class="tips">
+      <div class="tip">
+        <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3c4 4 6 7 6 10a6 6 0 0 1-12 0c0-3 2-6 6-10z" stroke-linejoin="round"/></svg></div>
+        <div><h4>「サビ」は海の上で進む</h4><p>長い船旅では湿気が大敵。気化性防錆（VCI）紙やバリア梱包＋乾燥剤で、金属部品を結露・腐食から守ります。</p></div>
+      </div>
+      <div class="tip">
+        <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 8l9-5 9 5v8l-9 5-9-5z" stroke-linejoin="round"/><path d="M9 11h6M12 8v6"/></svg></div>
+        <div><h4>木箱には「焼印」が要る</h4><p>輸出用の木材梱包は、国際基準(ISPM No.15)に基づく熱処理＋IPPCマークが必要。これがないと現地で荷止めされることも。</p></div>
+      </div>
+      <div class="tip">
+        <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2v20M5 9l7-5 7 5M5 9v8l7 4 7-4V9" stroke-linejoin="round"/></svg></div>
+        <div><h4>大物は「重心」で決まる</h4><p>一点物の大型貨物は、重心位置の表示と固縛が安全輸送のカギ。傾けたり吊り上げたりしても荷崩れしない設計が必要です。</p></div>
+      </div>
+      <div class="tip">
+        <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16M9 4v16"/></svg></div>
+        <div><h4>「箱選び」でコストは変わる</h4><p>過剰梱包は送料と資材費のムダ。三栄は<b>木箱を自社製造</b>できるので、中身にぴったりの寸法で、品質を保ちつつコストのムダを抑えられます。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section class="section alt" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>よくあるご質問</h2>
+    </div>
+    <div class="faq">
+      <details class="qa" open>
+        <summary><span class="qmark">Q.</span>対応エリアはどこまでですか？</summary>
+        <div class="ans"><span class="a-label">A.</span>埼玉を拠点に、群馬・東京・千葉・栃木・茨城をカバーしています。輸出梱包・海外輸送は全国・海外向けに対応可能です。まずはご相談ください。</div>
+      </details>
+      <details class="qa">
+        <summary><span class="qmark">Q.</span>小ロットやスポット（単発）でも頼めますか？</summary>
+        <div class="ans"><span class="a-label">A.</span>はい、一点物・単発のご依頼も歓迎です。「これだけお願いしたい」という小さなご相談こそ、私たちの得意分野です。</div>
+      </details>
+      <details class="qa">
+        <summary><span class="qmark">Q.</span>車のクレイモデルのような大物・精密品も輸出できますか？</summary>
+        <div class="ans"><span class="a-label">A.</span>得意分野です。専用の木箱・防錆・固縛設計で、繊細で大きな一点物も安全に海外へお届けします。梱包から通関まで一貫対応します。</div>
+      </details>
+      <details class="qa">
+        <summary><span class="qmark">Q.</span>見積もりは無料ですか？</summary>
+        <div class="ans"><span class="a-label">A.</span>はい、お見積りは無料です。内容を伺ったうえで、最適なプランとあわせてご提示します。<span class="ph">[料金の目安や最低受注額があればここに記載]</span></div>
+      </details>
+      <details class="qa">
+        <summary><span class="qmark">Q.</span>急ぎの相談にも対応してもらえますか？</summary>
+        <div class="ans"><span class="a-label">A.</span>スピードは私たちの強みです。お急ぎの場合はお電話いただくのが最も確実です。できる限り早く動きます。</div>
+      </details>
+      <details class="qa">
+        <summary><span class="qmark">Q.</span>包装資材だけの購入もできますか？</summary>
+        <div class="ans"><span class="a-label">A.</span>もちろん可能です。段ボール・緩衝材・防錆資材などを格安でご提供しています。最適な資材選びのご相談も承ります。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 会社情報・アクセス ============== -->
+<section class="section" id="company">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">COMPANY</span>
+      <h2>会社情報・アクセス</h2>
+    </div>
+    <div class="company-grid">
+      <div class="info-table">
+        <dl>
+          <div class="info-row"><dt>会社名</dt><dd>株式会社三栄</dd></div>
+          <div class="info-row"><dt>所在地</dt><dd class="ph">[〒000-0000 埼玉県〇〇市〇〇 0-0-0]</dd></div>
+          <div class="info-row"><dt>電話 / FAX</dt><dd><span class="ph">[TEL 000-0000-0000]</span> / <span class="ph">[FAX 000-0000-0000]</span></dd></div>
+          <div class="info-row"><dt>設立</dt><dd class="ph">[西暦0000年0月]</dd></div>
+          <div class="info-row"><dt>代表者</dt><dd class="ph">[代表取締役 〇〇 〇〇]</dd></div>
+          <div class="info-row"><dt>資本金</dt><dd class="ph">[0,000万円]</dd></div>
+          <div class="info-row"><dt>従業員数</dt><dd class="ph">[00名]</dd></div>
+          <div class="info-row"><dt>事業内容</dt><dd>在庫管理・倉庫／梱包・輸出梱包（化学品・大物・精密／木箱の自社製造）／輸送・配送／輸出入通関／海外引っ越し／包装資材の販売</dd></div>
+          <div class="info-row"><dt>対応エリア</dt><dd>埼玉・群馬・東京・千葉・栃木・茨城（輸出は全国・海外対応）</dd></div>
+          <div class="info-row"><dt>許認可</dt><dd class="ph">[貨物利用運送事業 等／保有していれば記載]</dd></div>
+        </dl>
+      </div>
+
+      <div class="area-card">
+        <h4>対応エリア</h4>
+        <p class="sub">関東6県をスピーディにカバー</p>
+        <!-- 対応エリアの簡易マップ（インラインSVG） -->
+        <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="対応エリア：埼玉・群馬・東京・千葉・栃木・茨城">
+          <rect x="0" y="0" width="300" height="240" rx="16" fill="#f2f9f4"/>
+          <!-- 群馬 -->
+          <rect x="34" y="42" width="78" height="58" rx="12" fill="#bfe6cd"/>
+          <text x="73" y="76" text-anchor="middle" font-family="Zen Maru Gothic,sans-serif" font-size="15" font-weight="700" fill="#16573a">群馬</text>
+          <!-- 栃木 -->
+          <rect x="120" y="36" width="74" height="62" rx="12" fill="#bfe6cd"/>
+          <text x="157" y="72" text-anchor="middle" font-family="Zen Maru Gothic,sans-serif" font-size="15" font-weight="700" fill="#16573a">栃木</text>
+          <!-- 茨城 -->
+          <rect x="202" y="44" width="66" height="78" rx="12" fill="#bfe6cd"/>
+          <text x="235" y="88" text-anchor="middle" font-family="Zen Maru Gothic,sans-serif" font-size="15" font-weight="700" fill="#16573a">茨城</text>
+          <!-- 埼玉（拠点・強調） -->
+          <rect x="58" y="108" width="116" height="50" rx="12" fill="#1d7a4f"/>
+          <text x="116" y="132" text-anchor="middle" font-family="Zen Maru Gothic,sans-serif" font-size="16" font-weight="900" fill="#fff">埼玉（拠点）</text>
+          <circle cx="116" cy="146" r="4" fill="#f09636"/>
+          <!-- 東京 -->
+          <rect x="58" y="166" width="74" height="44" rx="12" fill="#bfe6cd"/>
+          <text x="95" y="193" text-anchor="middle" font-family="Zen Maru Gothic,sans-serif" font-size="15" font-weight="700" fill="#16573a">東京</text>
+          <!-- 千葉 -->
+          <rect x="140" y="130" width="72" height="80" rx="12" fill="#bfe6cd"/>
+          <text x="176" y="174" text-anchor="middle" font-family="Zen Maru Gothic,sans-serif" font-size="15" font-weight="700" fill="#16573a">千葉</text>
+        </svg>
+        <p class="map-note">［公開時はここにGoogleマップ等を埋め込めます。住所確定後にご案内します］</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 採用バナー ============== -->
+<section class="section cream" id="recruit">
+  <div class="wrap">
+    <div class="recruit">
+      <h3>一緒に「日本の物流」を支える仲間を募集中</h3>
+      <p>未経験から始めた先輩も活躍中。人を大切にする、あたたかい職場です。まずは気軽にお問い合わせください。</p>
+      <a class="btn btn-ghost" href="#contact">採用について問い合わせる</a>
+      <p style="font-size:.74rem;color:rgba(255,255,255,.7);margin:14px 0 0;">＊募集職種・条件は確定後に掲載します（現在は問い合わせ受付のみ）。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 問い合わせ ============== -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">CONTACT</span>
+      <h2>まずは、お気軽にご相談ください</h2>
+      <p>「これってお願いできる？」のひと言からで大丈夫。物流のことなら、何でもお聞かせください。</p>
+    </div>
+
+    <div class="contact-grid">
+      <div>
+        <div class="contact-methods">
+          <a class="cm tel" href="tel:[0000000000]">
+            <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" stroke-linejoin="round"/></svg></span>
+            <span class="ctxt"><span class="lbl">お電話（最短ルート）</span><span class="val ph">[000-0000-0000]</span><span class="note ph">[受付時間：平日 9:00〜18:00]</span></span>
+          </a>
+          <a class="cm mail" href="mailto:[info@example.co.jp]">
+            <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <span class="ctxt"><span class="lbl">メール</span><span class="val ph">[info@example.co.jp]</span><span class="note">24時間受付</span></span>
+          </a>
+          <a class="cm line" href="[LINE公式アカウントのURL]" target="_blank" rel="noopener">
+            <span class="ci"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.69 2 10.23c0 4.07 3.55 7.48 8.34 8.13.32.07.77.22.88.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.92C21.36 13.66 22 12 22 10.23 22 5.69 17.52 2 12 2z"/></svg></span>
+            <span class="ctxt"><span class="lbl">LINEで相談</span><span class="val">友だち追加して相談</span><span class="note ph">[QRコード/リンクは登録後に差し替え]</span></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h3>お問い合わせフォーム</h3>
+        <p class="hint">下記を入力のうえ送信ください。＊送信ボタンでメール作成画面が開きます（後でフォーム送信機能に差し替え可）。</p>
+        <form id="contactForm">
+          <div class="q-row"><label for="f-company">会社名</label><input id="f-company" type="text" placeholder="株式会社〇〇"></div>
+          <div class="q-row"><label for="f-name">お名前</label><input id="f-name" type="text" placeholder="山田 太郎"></div>
+          <div class="q-row"><label for="f-contact">ご連絡先（電話 / メール）</label><input id="f-contact" type="text" placeholder="090-0000-0000 / you@example.com"></div>
+          <div class="q-row"><label for="f-body">ご相談内容</label><textarea id="f-body" rows="4" placeholder="例）海外向けの大物梱包と通関をお願いしたいです。"></textarea></div>
+          <button type="submit" class="btn btn-primary submit">この内容で送信する</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== フッター ============== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="f-brand">
+        <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true" style="width:40px;height:40px;">
+          <rect x="2" y="2" width="44" height="44" rx="13" fill="#239160"/>
+          <path d="M13 17h22l-4 5H17l-4-5z" fill="#fff"/>
+          <path d="M13 24h22l-4 5H17l-4-5z" fill="#9fe0bd"/>
+          <path d="M13 31h22l-4 5H17l-4-5z" fill="#f09636"/>
+        </svg>
+        <span class="name-block">
+          <span class="logo-name">株式会社三栄</span>
+          <span class="logo-sub">あらゆる物流をワンストップで</span>
+        </span>
+      </div>
+      <nav>
+        <a href="#service">サービス</a>
+        <a href="#strength">強み</a>
+        <a href="#works">実績・声</a>
+        <a href="#tips">豆知識</a>
+        <a href="#faq">よくある質問</a>
+        <a href="#company">会社情報</a>
+        <a href="#recruit">採用</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+    <div class="copy">&copy; <span id="year"></span> 株式会社三栄 SANEI LOGISTICS. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- 浮遊CTA（スマホのみ） -->
+<div class="float-cta">
+  <a class="btn btn-primary" href="tel:[0000000000]">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" stroke-linejoin="round"/></svg>
+    電話する
+  </a>
+  <a class="btn btn-line" href="[LINE公式アカウントのURL]" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.69 2 10.23c0 4.07 3.55 7.48 8.34 8.13.32.07.77.22.88.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.92C21.36 13.66 22 12 22 10.23 22 5.69 17.52 2 12 2z"/></svg>
+    LINE相談
+  </a>
+</div>
+
+<script>
+  // 年号
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ハンバーガーメニュー
+  var ham = document.getElementById('hamburger');
+  var links = document.getElementById('navLinks');
+  ham.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    ham.classList.toggle('open', open);
+    ham.setAttribute('aria-expanded', open ? 'true' : 'false');
+    ham.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+  });
+  // メニュー内リンクをタップしたら閉じる
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      links.classList.remove('open');
+      ham.classList.remove('open');
+      ham.setAttribute('aria-expanded','false');
+    });
+  });
+
+  // かんたん相談メモ：選ぶと文章を生成し、メール/LINE導線に反映
+  var qService = document.getElementById('q-service');
+  var qArea = document.getElementById('q-area');
+  var qDetail = document.getElementById('q-detail');
+  var qOut = document.getElementById('qOut');
+  var qMail = document.getElementById('qMail');
+  var MAIL_TO = '[info@example.co.jp]'; // ← 公開時にメールアドレスへ差し替え
+
+  function buildMemo(){
+    var s = qService.value, a = qArea.value, d = qDetail.value.trim();
+    if(!s && !a && !d){ qOut.classList.remove('show'); return ''; }
+    var lines = [];
+    if(s) lines.push('ご相談内容：' + s);
+    if(a) lines.push('エリア：' + a);
+    if(d) lines.push('詳細：' + d);
+    var memo = lines.join('\n');
+    qOut.innerHTML = '<b>相談メモ（プレビュー）</b><br>' + memo.replace(/\n/g,'<br>');
+    qOut.classList.add('show');
+    // メールリンクを更新
+    var subject = '物流のご相談' + (s ? '（' + s + '）' : '');
+    var body = memo + '\n\n--------\n（株式会社三栄 ホームページのかんたん相談メモより）';
+    qMail.href = 'mailto:' + MAIL_TO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    return memo;
+  }
+  [qService,qArea,qDetail].forEach(function(el){ el.addEventListener('input', buildMemo); });
+  // メール導線：メモが空のときは問い合わせセクションへスクロール
+  qMail.addEventListener('click', function(e){
+    if(!buildMemo()){ /* 何も選んでいなければ #contact へ（href初期値） */ }
+  });
+
+  // 問い合わせフォーム：mailto を組み立てて送信（バックエンド不要の暫定実装）
+  var form = document.getElementById('contactForm');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var company = document.getElementById('f-company').value.trim();
+    var name = document.getElementById('f-name').value.trim();
+    var contact = document.getElementById('f-contact').value.trim();
+    var body = document.getElementById('f-body').value.trim();
+    var mailBody =
+      '会社名：' + (company||'（未入力）') + '\n' +
+      'お名前：' + (name||'（未入力）') + '\n' +
+      'ご連絡先：' + (contact||'（未入力）') + '\n\n' +
+      'ご相談内容：\n' + (body||'（未入力）') + '\n\n' +
+      '--------\n（株式会社三栄 ホームページのお問い合わせフォームより）';
+    var subject = 'お問い合わせ' + (company ? '（' + company + '）' : '');
+    window.location.href = 'mailto:' + MAIL_TO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(mailBody);
+  });
+</script>
+</body>
+</html>
